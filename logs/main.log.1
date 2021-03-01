@@ -1,0 +1,302 @@
+[2021-03-01T16:11:03.255] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:12:26.743] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:12:39.660] [INFO] production - {
+  name: 'TypeError',
+  message: "Cannot read property 'hasOwnProperty' of undefined",
+  stack: "TypeError: Cannot read property 'hasOwnProperty' of undefined\n" +
+    '    at createPhoto (/Users/bytedance/project/blog-be/app/controller/photo.js:18:15)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
+    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 500
+}
+[2021-03-01T16:12:39.663] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:12:53.580] [INFO] production - {
+  name: 'ReferenceError',
+  message: 'filePath is not defined',
+  stack: 'ReferenceError: filePath is not defined\n' +
+    '    at createPhoto (/Users/bytedance/project/blog-be/app/controller/photo.js:18:30)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
+    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 500
+}
+[2021-03-01T16:12:53.582] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:13:21.244] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:17:37.581] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:17:53.414] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:18:03.721] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:18:07.665] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:18:27.624] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T16:19:06.003] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T16:19:18.411] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T16:19:47.761] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T16:20:32.318] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T16:23:03.457] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T16:23:14.922] [INFO] production - POST /api/photo RESPONSE: 400
+[2021-03-01T18:11:18.739] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T18:11:18.741] [INFO] production - GET /api/photo RESPONSE: 404
+[2021-03-01T18:11:24.988] [INFO] production - GET /api/photoes RESPONSE: 200
+[2021-03-01T18:22:12.183] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T18:22:47.103] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T18:23:10.261] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T18:27:44.461] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T18:28:46.733] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T18:29:04.577] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T18:29:04.577] [INFO] production - POST /api/photoes RESPONSE: 404
+[2021-03-01T18:29:09.702] [INFO] production - GET /api/photoes RESPONSE: 200
+[2021-03-01T18:29:51.340] [INFO] production - PUT /api/photo/1 RESPONSE: 200
+[2021-03-01T19:50:39.824] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T19:50:39.826] [INFO] production - PUT /api/uploadFile RESPONSE: 404
+[2021-03-01T19:50:51.066] [INFO] production - {
+  name: 'TypeError',
+  message: "Cannot read property 'name' of undefined",
+  stack: "TypeError: Cannot read property 'name' of undefined\n" +
+    '    at uploadFile (/Users/bytedance/project/blog-be/app/util/file.js:16:12)\n' +
+    '    at /Users/bytedance/project/blog-be/app/routers/base.js:31:15\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
+    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
+    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 500
+}
+[2021-03-01T19:50:51.067] [INFO] production - POST /api/uploadFile RESPONSE: 500
+[2021-03-01T19:51:39.523] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T19:54:29.440] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T19:55:05.577] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T19:58:38.484] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T19:58:57.221] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T20:08:28.968] [INFO] production - POST /api/uploadFile RESPONSE: 200
+[2021-03-01T20:17:17.263] [INFO] production - POST /api/photo RESPONSE: 500
+[2021-03-01T20:18:28.015] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T20:20:05.671] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T20:21:24.756] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T20:23:21.979] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T20:23:41.197] [INFO] production - GET /api/photoes RESPONSE: 200
+[2021-03-01T20:26:06.817] [INFO] production - DELETE /api/photo/1 RESPONSE: 200
+[2021-03-01T20:26:13.721] [INFO] production - DELETE /api/photo/3 RESPONSE: 200
+[2021-03-01T20:26:37.305] [INFO] production - DELETE /api/photo/3 RESPONSE: 200
+[2021-03-01T20:28:29.122] [INFO] production - DELETE /api/photo/5 RESPONSE: 200
+[2021-03-01T20:28:48.670] [INFO] production - DELETE /api/photo/6 RESPONSE: 500
+[2021-03-01T20:29:30.958] [INFO] production - DELETE /api/photo/5 RESPONSE: 200
+[2021-03-01T20:44:48.868] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T20:44:48.870] [INFO] production - POST /api/script RESPONSE: 404
+[2021-03-01T21:01:39.202] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:01:39.204] [INFO] production - POST /api/script RESPONSE: 404
+[2021-03-01T21:03:29.204] [INFO] production - POST /api/script RESPONSE: 500
+[2021-03-01T21:05:02.136] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-01T21:05:18.834] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-01T21:05:33.531] [INFO] production - PUT /api/script/1 RESPONSE: 200
+[2021-03-01T21:05:47.530] [INFO] production - DELETE /api/script/1 RESPONSE: 200
+[2021-03-01T21:12:49.231] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-01T21:13:29.046] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:13:29.048] [INFO] production - GET /api/audio RESPONSE: 404
+[2021-03-01T21:13:37.253] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-01T21:13:52.373] [INFO] production - PUT /api/audio/1 RESPONSE: 200
+[2021-03-01T21:14:01.040] [INFO] production - DELETE /api/audio/1 RESPONSE: 200
+[2021-03-01T21:16:41.882] [INFO] production - POST /api/photo RESPONSE: 400
+[2021-03-01T21:16:51.944] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-01T21:17:00.584] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:17:00.585] [INFO] production - GET /api/photos RESPONSE: 404
+[2021-03-01T21:17:16.274] [INFO] production - GET /api/photoes RESPONSE: 200
+[2021-03-01T21:18:11.346] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-01T21:19:03.472] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:19:03.473] [INFO] production - GET /photo/1614604611836_%E6%AF%95%E4%B8%9A%E6%AD%8C%E6%97%B6%E9%97%B4%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-01T21:20:19.110] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:20:19.111] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-03-01T21:20:20.480] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:20:20.481] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-03-01T21:32:27.004] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:32:27.006] [INFO] production - GET /photo/1614604611836_%E6%AF%95%E4%B8%9A%E6%AD%8C%E6%97%B6%E9%97%B4%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-01T21:32:59.681] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:32:59.685] [INFO] production - GET /photo/1614604611836_%E6%AF%95%E4%B8%9A%E6%AD%8C%E6%97%B6%E9%97%B4%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-01T21:33:01.492] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-01T21:33:01.492] [INFO] production - GET /photo/1614604611836_%E6%AF%95%E4%B8%9A%E6%AD%8C%E6%97%B6%E9%97%B4%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-01T21:33:03.165] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:26:5\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
