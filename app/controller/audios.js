@@ -17,7 +17,7 @@ class AudioController {
 
   async createAudio(ctx) {
     try {
-      const { synopsis } = ctx.request.body;
+      const { synopsis, title } = ctx.request.body;
       const file = ctx.request.files.file;
       if (!file.type.match(/audio/)) {
         ctx.body = { success: false, error: '请添加正确格式的音频' };
@@ -30,11 +30,10 @@ class AudioController {
         ctx.status = 500;
         return;
       }
-      const { length } = await Audio.findAll();
       const audio = await Audio.create({
-        id: length + 1,
         synopsis,
-        audio_path: `/audio/${res.saveName}`,
+        title,
+        audio_path: `${process.env.SERVE_URL}/audio/${res.saveName}`,
         save_path: res.savePath,
         save_name: res.saveName,
       });
@@ -49,13 +48,14 @@ class AudioController {
   async updateAudio(ctx) { 
     try {
       const { audio_id } = ctx.params;
-      const { synopsis } = ctx.request.body;
+      const { synopsis, title } = ctx.request.body;
       const audio = await Audio.findByPk(audio_id);
       if (!audio) {
         throw new global.errs.NotFound('没有找到相关音频');
       }
       await audio.update({
         synopsis,
+        title,
       });
       ctx.body = { success: true, data: audio };
       ctx.status = 200;

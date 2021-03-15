@@ -1,0 +1,297 @@
+[2021-03-11T20:27:28.603] [INFO] production - {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'synopsis' at row 1
+      at Packet.asError (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packets/packet.js:708:17)
+      at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)
+      at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)
+      at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+    errno: 1366,
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect string value: '\\xE6\\xB5\\x8B\\xE8\\xAF\\x95...' for column 'synopsis' at row 1",
+    sql: 'INSERT INTO `Script` (`id`,`synopsis`,`script_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?);',
+    parameters: [
+      1,
+      '测试一个脚本',
+      '/script/1615465648555_1.js',
+      '1615465648555_1.js',
+      '/Users/bytedance/project/blog-be/resourceStatic/script/',
+      '2021-03-11 20:27:28',
+      '2021-03-11 20:27:28'
+    ]
+  },
+  original: Error: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'synopsis' at row 1
+      at Packet.asError (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packets/packet.js:708:17)
+      at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)
+      at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)
+      at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+    errno: 1366,
+    sqlState: 'HY000',
+    sqlMessage: "Incorrect string value: '\\xE6\\xB5\\x8B\\xE8\\xAF\\x95...' for column 'synopsis' at row 1",
+    sql: 'INSERT INTO `Script` (`id`,`synopsis`,`script_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?);',
+    parameters: [
+      1,
+      '测试一个脚本',
+      '/script/1615465648555_1.js',
+      '1615465648555_1.js',
+      '/Users/bytedance/project/blog-be/resourceStatic/script/',
+      '2021-03-11 20:27:28',
+      '2021-03-11 20:27:28'
+    ]
+  },
+  sql: 'INSERT INTO `Script` (`id`,`synopsis`,`script_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?);',
+  parameters: [
+    1,
+    '测试一个脚本',
+    '/script/1615465648555_1.js',
+    '1615465648555_1.js',
+    '/Users/bytedance/project/blog-be/resourceStatic/script/',
+    '2021-03-11 20:27:28',
+    '2021-03-11 20:27:28'
+  ],
+  message: "Incorrect string value: '\\xE6\\xB5\\x8B\\xE8\\xAF\\x95...' for column 'synopsis' at row 1",
+  stack: "SequelizeDatabaseError: Incorrect string value: '\\xE6\\xB5\\x8B\\xE8\\xAF\\x95...' for column 'synopsis' at row 1\n" +
+    '    at Query.formatError (/Users/bytedance/project/blog-be/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)\n' +
+    '    at Execute.handler [as onResult] (/Users/bytedance/project/blog-be/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)\n' +
+    '    at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:30:14)\n' +
+    '    at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)\n' +
+    '    at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)\n' +
+    '    at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)\n' +
+    '    at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)\n' +
+    '    at Socket.emit (events.js:315:20)\n' +
+    '    at addChunk (_stream_readable.js:295:12)\n' +
+    '    at readableAddChunk (_stream_readable.js:271:9)\n' +
+    '    at Socket.Readable.push (_stream_readable.js:212:10)\n' +
+    '    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)',
+  status: 500
+}
+[2021-03-11T20:27:28.607] [INFO] production - POST /api/script RESPONSE: 500
+[2021-03-11T20:29:02.923] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-11T20:32:29.606] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:32:34.803] [INFO] production - PUT /api/script/1 RESPONSE: 200
+[2021-03-11T20:32:37.652] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:32:45.952] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-11T20:32:50.411] [INFO] production - DELETE /api/script/undefined RESPONSE: 500
+[2021-03-11T20:33:19.425] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:33:29.214] [INFO] production - DELETE /api/script/undefined RESPONSE: 500
+[2021-03-11T20:33:44.309] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:33:58.881] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:34:04.675] [INFO] production - DELETE /api/script/2 RESPONSE: 200
+[2021-03-11T20:34:08.128] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:37:24.000] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:38:02.887] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:38:24.282] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:40:46.162] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:41:04.331] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:44:32.650] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:01.828] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:06.454] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:45:07.047] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:26.129] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:27.046] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:45:27.611] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:31.908] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:45:47.062] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:46:29.065] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:46:55.709] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:49:53.006] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:51:39.597] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:53:53.219] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:53:53.750] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:53:56.600] [INFO] production - DELETE /api/script/1 RESPONSE: 200
+[2021-03-11T20:54:03.482] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-11T20:54:26.345] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:54:58.198] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:55:58.727] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:55:59.168] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:56:10.232] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-11T20:56:48.910] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:57:08.994] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:57:50.218] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:57:56.795] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:57:57.191] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:58:50.533] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:58:50.940] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:58:52.454] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:58:52.466] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-11T20:58:52.477] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-11T20:58:52.490] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:58:52.495] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:58:52.496] [INFO] production - GET /photo/1615343351822_8%E6%9C%8831%E6%97%A5%E6%8F%90%E7%A4%BA.jpg RESPONSE: 404
+[2021-03-11T20:58:52.497] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:58:52.497] [INFO] production - GET /photo/1615343590193_%E5%8A%9E%E7%90%86%E5%B0%B1%E4%B8%9A%E6%8E%A8%E8%8D%90%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-11T20:58:53.287] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-11T20:58:53.841] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:58:54.997] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:58:57.548] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:58:59.338] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-11T20:58:59.340] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-11T20:58:59.344] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:58:59.374] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:58:59.388] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:58:59.391] [INFO] production - GET /photo/1615343351822_8%E6%9C%8831%E6%97%A5%E6%8F%90%E7%A4%BA.jpg RESPONSE: 404
+[2021-03-11T20:58:59.392] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:58:59.392] [INFO] production - GET /photo/1615343590193_%E5%8A%9E%E7%90%86%E5%B0%B1%E4%B8%9A%E6%8E%A8%E8%8D%90%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-11T20:58:59.975] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-11T20:59:00.494] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-11T20:59:00.505] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-11T20:59:00.505] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:00.541] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:00.547] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:59:00.548] [INFO] production - GET /photo/1615343351822_8%E6%9C%8831%E6%97%A5%E6%8F%90%E7%A4%BA.jpg RESPONSE: 404
+[2021-03-11T20:59:00.548] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:59:00.549] [INFO] production - GET /photo/1615343590193_%E5%8A%9E%E7%90%86%E5%B0%B1%E4%B8%9A%E6%8E%A8%E8%8D%90%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-11T20:59:12.822] [INFO] production - GET /api/article/8/comments RESPONSE: 200
+[2021-03-11T20:59:14.854] [INFO] production - DELETE /api/article/8 RESPONSE: 200
+[2021-03-11T20:59:14.976] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T20:59:14.977] [INFO] production - GET /photo/1615343590193_%E5%8A%9E%E7%90%86%E5%B0%B1%E4%B8%9A%E6%8E%A8%E8%8D%90%E8%A1%A8.jpg RESPONSE: 404
+[2021-03-11T20:59:15.010] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:16.630] [INFO] production - GET /api/article/9/comments RESPONSE: 200
+[2021-03-11T20:59:18.451] [INFO] production - DELETE /api/article/9 RESPONSE: 200
+[2021-03-11T20:59:18.575] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:21.905] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:59:24.994] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:25.010] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-11T20:59:25.023] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-11T20:59:25.038] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-11T20:59:27.585] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:59:33.246] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T20:59:34.448] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-11T20:59:35.737] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-11T21:05:40.205] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-03-11T21:05:40.205] [INFO] production - GET /api/aduios RESPONSE: 404
+[2021-03-11T21:06:31.033] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:06:56.990] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:15:17.516] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:15:59.895] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:16:23.411] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:20:35.521] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:20:54.778] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-11T21:21:03.522] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:21:31.460] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:21:56.608] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:22:49.017] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:24:04.516] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:24:24.320] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:27:16.132] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-11T21:27:49.739] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:28:51.548] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:29:00.418] [INFO] production - DELETE /api/audio/undefined RESPONSE: 500
+[2021-03-11T21:29:14.195] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:29:17.572] [INFO] production - DELETE /api/audio/2 RESPONSE: 200
+[2021-03-11T21:29:20.806] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:29:25.671] [INFO] production - PUT /api/audio/undefined RESPONSE: 500
+[2021-03-11T21:30:14.401] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:30:19.991] [INFO] production - PUT /api/audio/1 RESPONSE: 200
+[2021-03-11T21:30:23.839] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:30:44.752] [INFO] production - PUT /api/audio/1 RESPONSE: 200
+[2021-03-11T21:30:52.627] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:31:39.665] [INFO] production - POST /api/audio RESPONSE: 400
+[2021-03-11T21:31:50.322] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-11T21:32:32.685] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:32:48.380] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-11T21:33:26.792] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-11T21:33:32.946] [INFO] production - GET /api/audios RESPONSE: 200

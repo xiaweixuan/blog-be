@@ -9,13 +9,32 @@ Article.init({
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
-  title: Sequelize.STRING(50),
-  cover: Sequelize.STRING,
-  synopsis: Sequelize.STRING,
-  content: Sequelize.TEXT,
-  view_count: Sequelize.INTEGER,
+  title: {
+    type: Sequelize.STRING(50),
+    allowNull: true,
+  },
+  cover: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  synopsis: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  content: {
+    type: Sequelize.TEXT,
+    allowNull: true,
+  },
+  view_count: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
+  },
+  json_content: {
+    type: Sequelize.TEXT,
+    allowNull: true,
+  },
 }, {
   sequelize,
   modelName: 'Article',
@@ -23,6 +42,6 @@ Article.init({
 })
 
 Article.hasMany(Comment, { foreignKey: 'article_id' });
-Comment.belongsTo(Article,  { foreignKey: 'article_id' });
+Comment.belongsTo(Article, { foreignKey: 'article_id' });
 
 module.exports = Article;

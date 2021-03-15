@@ -2,19 +2,37 @@ const { sequelize } = require('../db');
 const { Sequelize, Model } = require('sequelize');
 
 
-class User extends Model {}
+class User extends Model { }
 
 User.init({
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
   },
-  name: Sequelize.STRING,
-  autograph: Sequelize.STRING,
-  email: Sequelize.STRING,
-  qq: Sequelize.STRING,
-  weixin: Sequelize.INTEGER,
-  custom_fields: Sequelize.STRING,
+  name: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  autograph: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  email: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  qq: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  weixin: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  custom_fields: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
 }, {
   sequelize,
   modelName: 'User',

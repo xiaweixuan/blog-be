@@ -1,285 +1,285 @@
-[2021-02-28T18:59:54.770] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T19:02:26.666] [INFO] production - {
-  name: 'Error',
-  message: 'Request aborted',
-  stack: 'Error: Request aborted\n' +
-    '    at IncomingMessage.<anonymous> (/Users/bytedance/project/blog-be/node_modules/formidable/lib/incoming_form.js:122:19)\n' +
-    '    at IncomingMessage.emit (events.js:327:22)\n' +
-    '    at abortIncoming (_http_server.js:532:9)\n' +
-    '    at socketOnClose (_http_server.js:525:3)\n' +
-    '    at Socket.emit (events.js:327:22)\n' +
-    '    at TCP.<anonymous> (net.js:674:12)',
+[2021-03-12T20:10:33.265] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:11:31.080] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-12T20:11:31.596] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:11:32.335] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-12T20:11:32.856] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-12T20:11:52.977] [INFO] production - POST /api/audio RESPONSE: 500
+[2021-03-12T20:12:21.297] [INFO] production - {
+  name: 'SequelizeDatabaseError',
+  parent: Error: Out of range value for column 'id' at row 1
+      at Packet.asError (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packets/packet.js:708:17)
+      at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)
+      at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)
+      at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    code: 'ER_WARN_DATA_OUT_OF_RANGE',
+    errno: 1264,
+    sqlState: '22003',
+    sqlMessage: "Out of range value for column 'id' at row 1",
+    sql: 'INSERT INTO `Audio` (`id`,`synopsis`,`title`,`audio_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?,?);',
+    parameters: [
+      1615551141253,
+      '～',
+      '毕业歌',
+      'http://localhost:4000/audio/1615551141253_橙风归来（demo 4） 伴奏.m4a',
+      '1615551141253_橙风归来（demo 4） 伴奏.m4a',
+      '/Users/bytedance/project/blog-be/resourceStatic/audio/',
+      '2021-03-12 20:12:21',
+      '2021-03-12 20:12:21'
+    ]
+  },
+  original: Error: Out of range value for column 'id' at row 1
+      at Packet.asError (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packets/packet.js:708:17)
+      at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)
+      at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)
+      at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    code: 'ER_WARN_DATA_OUT_OF_RANGE',
+    errno: 1264,
+    sqlState: '22003',
+    sqlMessage: "Out of range value for column 'id' at row 1",
+    sql: 'INSERT INTO `Audio` (`id`,`synopsis`,`title`,`audio_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?,?);',
+    parameters: [
+      1615551141253,
+      '～',
+      '毕业歌',
+      'http://localhost:4000/audio/1615551141253_橙风归来（demo 4） 伴奏.m4a',
+      '1615551141253_橙风归来（demo 4） 伴奏.m4a',
+      '/Users/bytedance/project/blog-be/resourceStatic/audio/',
+      '2021-03-12 20:12:21',
+      '2021-03-12 20:12:21'
+    ]
+  },
+  sql: 'INSERT INTO `Audio` (`id`,`synopsis`,`title`,`audio_path`,`save_name`,`save_path`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?,?,?);',
+  parameters: [
+    1615551141253,
+    '～',
+    '毕业歌',
+    'http://localhost:4000/audio/1615551141253_橙风归来（demo 4） 伴奏.m4a',
+    '1615551141253_橙风归来（demo 4） 伴奏.m4a',
+    '/Users/bytedance/project/blog-be/resourceStatic/audio/',
+    '2021-03-12 20:12:21',
+    '2021-03-12 20:12:21'
+  ],
+  message: "Out of range value for column 'id' at row 1",
+  stack: "SequelizeDatabaseError: Out of range value for column 'id' at row 1\n" +
+    '    at Query.formatError (/Users/bytedance/project/blog-be/node_modules/sequelize/lib/dialects/mysql/query.js:244:16)\n' +
+    '    at Execute.handler [as onResult] (/Users/bytedance/project/blog-be/node_modules/sequelize/lib/dialects/mysql/query.js:51:23)\n' +
+    '    at Execute.execute (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/commands/command.js:30:14)\n' +
+    '    at Connection.handlePacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:408:32)\n' +
+    '    at PacketParser.onPacket (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:70:12)\n' +
+    '    at PacketParser.executeStart (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/packet_parser.js:75:16)\n' +
+    '    at Socket.<anonymous> (/Users/bytedance/project/blog-be/node_modules/mysql2/lib/connection.js:77:25)\n' +
+    '    at Socket.emit (events.js:315:20)\n' +
+    '    at addChunk (_stream_readable.js:295:12)\n' +
+    '    at readableAddChunk (_stream_readable.js:271:9)\n' +
+    '    at Socket.Readable.push (_stream_readable.js:212:10)\n' +
+    '    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)',
   status: 500
 }
-[2021-02-28T19:02:26.669] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T19:49:25.209] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'opt is not defined',
-  stack: 'ReferenceError: opt is not defined\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:31:21\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
+[2021-03-12T20:12:21.301] [INFO] production - POST /api/audio RESPONSE: 500
+[2021-03-12T20:12:35.668] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-12T20:13:01.969] [INFO] production - PUT /api/audio/1 RESPONSE: 200
+[2021-03-12T20:13:05.206] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-12T20:13:14.484] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-12T20:13:20.479] [INFO] production - DELETE /api/audio/2 RESPONSE: 200
+[2021-03-12T20:14:21.910] [INFO] production - POST /api/audio RESPONSE: 201
+[2021-03-12T20:14:41.852] [INFO] production - DELETE /api/audio/3 RESPONSE: 200
+[2021-03-12T20:14:51.263] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-12T20:15:01.159] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-12T20:15:11.645] [INFO] production - PUT /api/script/1 RESPONSE: 200
+[2021-03-12T20:15:18.352] [INFO] production - POST /api/script RESPONSE: 201
+[2021-03-12T20:15:24.450] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-12T20:15:28.621] [INFO] production - DELETE /api/script/2 RESPONSE: 200
+[2021-03-12T20:15:45.463] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:15:56.878] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-12T20:16:10.744] [INFO] production - PUT /api/photo/1 RESPONSE: 200
+[2021-03-12T20:16:14.291] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:16:26.273] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-12T20:16:31.273] [INFO] production - DELETE /api/photo/2 RESPONSE: 200
+[2021-03-12T20:16:39.876] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:16:41.491] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-12T20:17:23.030] [INFO] production - PUT /api/user RESPONSE: 201
+[2021-03-12T20:17:34.532] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-12T20:17:34.543] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-12T20:17:34.548] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-12T20:17:34.565] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-12T20:17:35.816] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-12T20:17:37.385] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-12T20:17:37.395] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-12T20:17:37.404] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-12T20:17:37.426] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-12T20:24:07.774] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-12T20:24:07.785] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-12T20:24:07.797] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-12T20:24:07.808] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-14T05:02:35.629] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-14T05:02:35.630] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-14T05:02:35.634] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-14T05:02:35.884] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T10:50:58.596] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T10:50:58.596] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T10:50:58.627] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T10:50:58.696] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T12:25:41.463] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T12:25:42.199] [INFO] production - GET /api/scripts RESPONSE: 200
+[2021-03-15T12:25:42.858] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-15T12:25:43.903] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-15T12:25:45.023] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T12:25:45.045] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T12:25:45.065] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T12:25:45.087] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T12:34:09.681] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T12:34:09.681] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T12:34:09.702] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T12:37:03.684] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T12:37:03.700] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T12:37:03.701] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T15:28:37.186] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T15:28:37.203] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T15:28:37.224] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T15:55:28.981] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T15:55:28.997] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T15:55:29.020] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T15:55:39.736] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T15:55:39.741] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T15:55:39.752] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T15:55:53.600] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T15:55:53.600] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T15:55:53.600] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:05:01.592] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:05:01.605] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:05:01.612] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:06:03.801] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:06:03.812] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:06:03.821] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:07:02.638] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:07:02.644] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:07:02.653] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:07:58.064] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:07:58.080] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:07:58.081] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:08:36.431] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:08:36.447] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:08:36.463] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:08:55.726] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:08:55.751] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:08:55.751] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:09:05.595] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
     '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:49:25.211] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T19:50:58.034] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T19:51:08.175] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T19:51:25.765] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T19:54:56.628] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'fs is not defined',
-  stack: 'ReferenceError: fs is not defined\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:34:18\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:54:56.631] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T19:55:08.945] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'element is not defined',
-  stack: 'ReferenceError: element is not defined\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:34:38\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:55:08.954] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T19:55:44.996] [INFO] production - {
-  name: 'TypeError',
-  message: "Cannot read property 'name' of undefined",
-  stack: "TypeError: Cannot read property 'name' of undefined\n" +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:43:28\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:56:18.478] [INFO] production - {
-  name: 'TypeError',
-  message: "Cannot read property 'name' of undefined",
-  stack: "TypeError: Cannot read property 'name' of undefined\n" +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:45:28\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:56:46.166] [INFO] production - {
-  name: 'TypeError',
-  message: "Cannot read property 'name' of undefined",
-  stack: "TypeError: Cannot read property 'name' of undefined\n" +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:45:28\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T19:57:06.184] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T19:57:38.699] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:02:23.735] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:20:07.065] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'elefilement is not defined',
-  stack: 'ReferenceError: elefilement is not defined\n' +
-    '    at uploadFile (/Users/bytedance/project/blog-be/app/util/file.js:18:38)\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:31:15\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T20:20:07.068] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T20:20:32.901] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:22:57.825] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:34:12.800] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'path is not defined',
-  stack: 'ReferenceError: path is not defined\n' +
-    '    at /Users/bytedance/project/blog-be/app/util/file.js:38:21\n' +
-    '    at Array.forEach (<anonymous>)\n' +
-    '    at deleteFile (/Users/bytedance/project/blog-be/app/util/file.js:37:11)\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:33:15\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T20:34:12.809] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T20:34:42.521] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:35:26.389] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:37:03.795] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T20:37:29.473] [INFO] production - {
-  code: 'ERR_INVALID_CALLBACK',
-  name: 'TypeError',
-  message: 'Callback must be a function. Received undefined',
-  stack: 'TypeError [ERR_INVALID_CALLBACK]: Callback must be a function. Received undefined\n' +
-    '    at makeCallback (fs.js:153:11)\n' +
-    '    at Object.unlink (fs.js:1125:14)\n' +
-    '    at /Users/bytedance/project/blog-be/app/util/file.js:44:14\n' +
-    '    at Array.forEach (<anonymous>)\n' +
-    '    at deleteFile (/Users/bytedance/project/blog-be/app/util/file.js:38:11)\n' +
-    '    at /Users/bytedance/project/blog-be/app/routers/base.js:33:15\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:23:5\n' +
-    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:28:9)',
-  status: 500
-}
-[2021-02-28T20:37:29.476] [INFO] production - POST /api/file RESPONSE: 500
-[2021-02-28T21:59:02.712] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T21:59:16.433] [INFO] production - POST /api/file RESPONSE: 200
-[2021-02-28T21:59:18.264] [INFO] production - POST /api/file RESPONSE: 200
-[2021-03-01T16:00:00.578] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:00:17.779] [INFO] production - {
-  name: 'ReferenceError',
-  message: 'Article is not defined',
-  stack: 'ReferenceError: Article is not defined\n' +
-    '    at createPhoto (/Users/bytedance/project/blog-be/app/controller/photo.js:18:26)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
     '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
-  status: 500
+  status: 404
 }
-[2021-03-01T16:00:17.782] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:00:46.709] [INFO] production - POST /api/photo RESPONSE: 201
-[2021-03-01T16:07:06.230] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:07:44.796] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:08:15.130] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:09:21.193] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:10:14.635] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:10:35.985] [INFO] production - POST /api/photo RESPONSE: 500
-[2021-03-01T16:11:03.249] [INFO] production - {
-  name: 'TypeError',
-  message: "Cannot read property 'filePath' of undefined",
-  stack: "TypeError: Cannot read property 'filePath' of undefined\n" +
-    '    at createPhoto (/Users/bytedance/project/blog-be/app/controller/photo.js:18:15)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:372:16\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:34:12\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:377:31)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-router/lib/router.js:353:32)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at bodyParser (/Users/bytedance/project/blog-be/node_modules/koa-bodyparser/index.js:82:54)\n' +
-    '    at dispatch (/Users/bytedance/project/blog-be/node_modules/koa-compose/index.js:42:32)\n' +
-    '    at /Users/bytedance/project/blog-be/app/middleware/koa-formidable.js:20:13\n' +
-    '    at async exports.userAgent (/Users/bytedance/project/blog-be/node_modules/koa-useragent/dist/index.js:11:5)\n' +
-    '    at async /Users/bytedance/project/blog-be/app/app.js:24:5\n' +
+[2021-03-15T16:09:05.599] [INFO] production - POST /api/photo/create RESPONSE: 404
+[2021-03-15T16:09:45.567] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:09:45.583] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:09:45.593] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:09:53.276] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
     '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
-  status: 500
+  status: 404
 }
+[2021-03-15T16:09:53.276] [INFO] production - OPTIONS /api/photo/create RESPONSE: 404
+[2021-03-15T16:13:41.763] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:13:41.776] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:13:41.791] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:14:21.659] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:14:21.663] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:14:21.675] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:17:28.771] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:17:28.772] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:17:28.773] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:18:33.253] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:18:33.255] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:18:33.281] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:18:42.706] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-15T16:19:10.249] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:19:21.313] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:19:21.322] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:19:21.322] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:19:21.370] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:19:23.835] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-15T16:19:24.451] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:19:24.692] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:19:24.692] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:19:24.697] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:19:27.755] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:19:29.913] [INFO] production - DELETE /api/photo/3 RESPONSE: 200
+[2021-03-15T16:21:16.581] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:21:17.410] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-15T16:21:18.365] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:21:18.383] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:21:18.406] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:21:18.428] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:21:49.312] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:21:49.330] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:21:49.336] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:37:15.376] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-15T16:37:36.235] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:37:40.143] [INFO] production - DELETE /api/photo/4 RESPONSE: 200
+[2021-03-15T16:37:43.464] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:37:43.510] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:37:43.548] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:37:43.599] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:37:52.486] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-15T16:42:44.929] [INFO] production - POST /api/article RESPONSE: 500
+[2021-03-15T16:42:45.323] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:42:50.673] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:42:51.696] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:42:51.745] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:42:51.778] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:42:51.815] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:42:52.766] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:42:53.759] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:42:53.761] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:42:53.769] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:42:53.835] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:43:15.853] [INFO] production - POST /api/article/tag RESPONSE: 500
+[2021-03-15T16:44:59.907] [INFO] production - POST /api/article/tag RESPONSE: 201
+[2021-03-15T16:45:05.007] [INFO] production - POST /api/article/type RESPONSE: 201
+[2021-03-15T16:45:09.919] [INFO] production - GET /api/articles?type_id=1 RESPONSE: 200
+[2021-03-15T16:45:10.527] [INFO] production - GET /api/articles?type_id=1&tag_id=1 RESPONSE: 200
+[2021-03-15T16:45:11.018] [INFO] production - GET /api/articles?type_id=1 RESPONSE: 200
+[2021-03-15T16:45:11.761] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:45:24.833] [INFO] production - GET /api/photos RESPONSE: 200
+[2021-03-15T16:45:34.098] [INFO] production - DELETE /api/photo/5 RESPONSE: 200
+[2021-03-15T16:45:35.088] [INFO] production - GET /api/article/types RESPONSE: 200
+[2021-03-15T16:45:35.127] [INFO] production - GET /api/article/tags RESPONSE: 200
+[2021-03-15T16:45:35.164] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:45:35.214] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:45:48.543] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-15T16:50:14.239] [INFO] production - POST /api/article RESPONSE: 201
+[2021-03-15T16:50:14.566] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:50:21.246] [INFO] production - GET /api/article/1/comments RESPONSE: 200
+[2021-03-15T16:50:53.832] [INFO] production - POST /api/photo RESPONSE: 201
+[2021-03-15T16:50:55.672] [INFO] production - PUT /api/article/1 RESPONSE: 200
+[2021-03-15T16:50:57.359] [INFO] production - GET /api/articles RESPONSE: 200
+[2021-03-15T16:51:07.182] [INFO] production - GET /api/articles?type_id=1 RESPONSE: 200

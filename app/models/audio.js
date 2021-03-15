@@ -10,7 +10,14 @@ Audio.init({
     primaryKey: true,
     autoIncrement: true
   },
-  synopsis: Sequelize.STRING,
+  synopsis: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  title: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
   audio_path: Sequelize.STRING,
   save_name: Sequelize.STRING,
   save_path: Sequelize.STRING,

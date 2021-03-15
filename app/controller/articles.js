@@ -76,25 +76,33 @@ class ArticleController {
 
   async createArticle(ctx) {
     try {
-      const { title, cover, synopsis, content, tag_list, type_list } = ctx.request.body;
-      const { length } = await Article.findAll();
+      const { title, cover, synopsis, content, tag_list, type_list, json_content } = ctx.request.body;
       const article = await Article.create({
-        id: length + 1,
         title,
         cover,
         synopsis,
         content,
         view_count: 0,
+        json_content,
       });
       if (tag_list && tag_list.length) {
         let tags = await ArticleTag.findAll({ where: { id: tag_list } });
-        article.setArticleTags(tags)
+        await article.setArticleTags(tags)
       }
       if (type_list && type_list.length) {
         let types = await ArticleType.findAll({ where: { id: type_list } });
-        article.setArticleTypes(types);
+        await article.setArticleTypes(types);
       }
-      ctx.body = { success: true, data: article };
+      const ArticleTags = await article.getArticleTags();
+      const ArticleTypes = await article.getArticleTypes();
+      ctx.body = {
+        success: true,
+        data: {
+          ...article.toJSON(),
+          ArticleTags,
+          ArticleTypes
+        }
+      };
       ctx.status = 201;
     } catch (error) {
       ctx.body = { success: false, error };
@@ -105,7 +113,7 @@ class ArticleController {
   async updateArticle(ctx) {
     try {
       const { article_id: id } = ctx.params
-      const { title, cover, synopsis, content, tag_list, type_list  } = ctx.request.body;
+      const { title, cover, synopsis, content, tag_list, type_list, json_content, view_count } = ctx.request.body;
       const article = await Article.findByPk(id);
       if (!article) {
         throw new global.errs.NotFound('没有找到相关文章');
@@ -115,16 +123,27 @@ class ArticleController {
         cover,
         synopsis,
         content,
+        view_count,
+        json_content,
       });
       if (tag_list && tag_list.length) {
         let tags = await ArticleTag.findAll({ where: { id: tag_list } });
-        article.setArticleTags(tags)
+        await article.setArticleTags(tags)
       }
       if (type_list && type_list.length) {
         let types = await ArticleType.findAll({ where: { id: type_list } });
-        article.setArticleTypes(types);
+        await article.setArticleTypes(types);
       }
-      ctx.body = { success: true, data: article };
+      const ArticleTags = await article.getArticleTags();
+      const ArticleTypes = await article.getArticleTypes();
+      ctx.body = {
+        success: true,
+        data: {
+          ...article.toJSON(),
+          ArticleTags,
+          ArticleTypes
+        }
+      };
       ctx.status = 200;
     } catch (error) {
       ctx.body = { success: false, error };
@@ -139,9 +158,15 @@ class ArticleController {
       if (!article) {
         throw new global.errs.NotFound('没有找到相关文章');
       }
+      const comments = await Comment.findAll({
+        where: {
+          article_id: id
+        }
+      });
+      comments.forEach(async (item) => await item.destroy());
       await article.setArticleTags([]);
       await article.setArticleTypes([]);
-      await article.destroy()
+      await article.destroy({ cascade: false })
       ctx.body = { success: true, id: Number(id) };
       ctx.status = 200;
     } catch (error) {
@@ -164,9 +189,7 @@ class ArticleController {
   async createTag(ctx) {
     try {
       const { name } = ctx.request.body;
-      const { length } = await ArticleTag.findAll();
       const result = await ArticleTag.create({
-        id: length + 1,
         name,
       });
       ctx.body = { success: true, data: result };
@@ -208,9 +231,7 @@ class ArticleController {
   async createType(ctx) {
     try {
       const { name } = ctx.request.body;
-      const { length } = await ArticleType.findAll();
       const result = await ArticleType.create({
-        id: length + 1,
         name,
       });
       ctx.body = { success: true, data: result };
@@ -258,9 +279,7 @@ class ArticleController {
     try {
       const { article_id } = ctx.params;
       const { content, author, email } = ctx.request.body;
-      const { length } = await Comment.findAll();
       const result = await Comment.create({
-        id: length + 1,
         article_id,
         content,
         author,

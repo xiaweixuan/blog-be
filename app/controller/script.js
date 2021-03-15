@@ -16,7 +16,7 @@ class ScriptController {
   }
 
   async createScript(ctx) {
-    try {
+    // try {
       const { synopsis } = ctx.request.body;
       const file = ctx.request.files.file;
       if (!file.type.match(/javascript/)) {
@@ -30,24 +30,23 @@ class ScriptController {
         ctx.status = 500;
         return;
       }
-      const { length } = await Script.findAll();
       const script = await Script.create({
-        id: length + 1,
         synopsis,
-        script_path: `/script/${res.saveName}`,
+        script_path: `${process.env.SERVE_URL}/script/${res.saveName}`,
         save_path: res.savePath,
         save_name: res.saveName,
       });
+      console.log(script)
       ctx.body = { success: true, data: script };
       ctx.status = 201;
-    } catch (error) {
-      ctx.body = { success: false, error };
-      ctx.status = 500;
-    }
+    // } catch (error) {
+    //   ctx.body = { success: false, error };
+    //   ctx.status = 500;
+    // }
   }
 
   async updateScript(ctx) {
-    try {
+    // try {
       const { script_id } = ctx.params;
       const { synopsis } = ctx.request.body;
       const script = await Script.findByPk(script_id);
@@ -59,10 +58,10 @@ class ScriptController {
       });
       ctx.body = { success: true, data: script };
       ctx.status = 200;
-    } catch (error) {
-      ctx.body = { success: false, error };
-      ctx.status = 500;
-    }
+    // } catch (error) {
+    //   ctx.body = { success: false, error };
+    //   ctx.status = 500;
+    // }
   }
 
   async removeScript(ctx) {

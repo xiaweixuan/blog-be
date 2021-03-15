@@ -15,14 +15,28 @@ class UserController {
 
   async update(ctx) {
     try {
-      const { autograph, email, qq, weixin, custom_fields } = ctx.request.body;
-      const user = await User.findByPk(1);
-      user.autograph = autograph;
-      user.email = email;
-      user.qq = qq;
-      user.weixin = weixin;
-      user.custom_fields = custom_fields;
-      await user.save();
+      const { name, autograph, email, qq, weixin, custom_fields } = ctx.request.body;
+      let user = await User.findByPk(1);
+      if (!user) {
+        user = await User.create({
+          id: 1,
+          name,
+          autograph,
+          email,
+          qq,
+          weixin,
+          custom_fields,
+        });
+      } else {
+        await user.update({
+          name,
+          autograph,
+          email,
+          qq,
+          weixin,
+          custom_fields,
+        });
+      }
       ctx.body = { success: true, data: user };
       ctx.status = 201;
     } catch (error) {

@@ -42,11 +42,9 @@ class PhotoController {
         ctx.status = 500;
         return;
       }
-      const { length } = await Photo.findAll();
       const photo = await Photo.create({
-        id: length + 1,
-        synopsis,
-        img_path: `/photo/${res.saveName}`,
+        synopsis: type === 1 ? '文章中引用' : synopsis,
+        img_path: `${process.env.SERVE_URL}/photo/${res.saveName}`,
         save_path: res.savePath,
         save_name: res.saveName,
         type,

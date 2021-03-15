@@ -2,7 +2,7 @@ const { Sequelize, Model } = require('sequelize');
 const { sequelize } = require('../db');
 
 
-class Script extends Model {}
+class Script extends Model { }
 
 Script.init({
   id: {
@@ -10,7 +10,10 @@ Script.init({
     primaryKey: true,
     autoIncrement: true
   },
-  synopsis: Sequelize.STRING,
+  synopsis: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
   script_path: Sequelize.STRING,
   save_name: Sequelize.STRING,
   save_path: Sequelize.STRING,

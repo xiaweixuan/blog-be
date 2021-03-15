@@ -10,10 +10,14 @@ Photo.init({
     primaryKey: true,
     autoIncrement: true
   },
-  synopsis: Sequelize.STRING,
+  synopsis: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
   img_path: Sequelize.STRING,
   save_name: Sequelize.STRING,
   save_path: Sequelize.STRING,
+  type: Sequelize.INTEGER,
 }, {
   sequelize,
   modelName: 'Photo',

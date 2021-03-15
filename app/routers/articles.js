@@ -17,7 +17,7 @@ router.delete(`${baseUrl}/article/tag/:tag_id`, articleController.removeTag);
 
 router.get(`${baseUrl}/article/types`, articleController.getTypeList);
 router.post(`${baseUrl}/article/type`, articleController.createType);
-router.delete(`${baseUrl}/article/type/:tag_id`, articleController.removeType);
+router.delete(`${baseUrl}/article/type/:type_id`, articleController.removeType);
 
 router.get(`${baseUrl}/article/:article_id/comments`, articleController.getCommentList)
 router.post(`${baseUrl}/article/:article_id/comment`, articleController.createComment)
