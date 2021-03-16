@@ -1,23 +1,10 @@
 const jsonwebtoken = require('jsonwebtoken');
 
 function getJwtToken(ctx) {
-  if (!ctx.header || !ctx.header.authorization) {
-    return;
+  if (!ctx.header || !ctx.header['x-jwt-token']) {
+    return ;
   }
-
-  const parts = ctx.header.Authorization.split(" ");
-
-  if (parts.length === 2) {
-    const scheme = parts[0];
-    const credentials = parts[1];
-
-    if (/^Bearer$/i.test(scheme)) {
-      return credentials;
-    }
-  }
-  return ctx.throw(401, {
-    error: { code: 401, message: "AUTHENTICATION_ERROR" },
-  });
+  return ctx.header['x-jwt-token']
 }
 
 function createToken(userinfo) {

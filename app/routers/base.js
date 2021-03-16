@@ -1,9 +1,10 @@
 const Router = require('koa-router');
 const path = require('path');
-const { uploadFile, deleteFile } = require('../util/file');
+const authenticateToken = require('../middleware/authenticate');
 const router = new Router();
 
 const baseUrl = "/api";
+const authenticity = authenticateToken({ secret: process.env.JWT_SECRET });
 
 router.get(`${baseUrl}`, (ctx) => {
   ctx.body = {
@@ -21,22 +22,13 @@ router.get(`${baseUrl}/1`, (ctx) => {
   //   data: { message: "Hi there.", version: process.env.IMAGE_TAG },
   // };
 });
-
-
-
-const uploadDir = path.join(__dirname, '../../resourceStatic/');
-
-router.post(`${baseUrl}/uploadFile`, async (ctx) => {
-  const file = ctx.request.files.file;
-  const res = uploadFile(file, uploadDir);
-
-  // const res = deleteFile(uploadDir, '1614514832899_工作照.jpg')
-
+router.get(`${baseUrl}/2`, (ctx) => {
+  ctx.status = 202;
   ctx.body = {
-    success: true,
-    data: res,
+    data: { message: "Hi there.", version: process.env.IMAGE_TAG },
   };
 });
+
 
 module.exports = router;
 

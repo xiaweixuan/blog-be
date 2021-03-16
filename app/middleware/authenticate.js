@@ -9,7 +9,7 @@ const authenticateToken = (opts = {}) => {
     const token = getJwtToken(ctx);
 
     try {
-      const decoded = verifyToken(token, process.env.JWT_SECRET);
+      const decoded = verifyToken(token, secret);
       ctx.state.user = decoded.data;
     } catch (error) {
       if (error.name === "TokenExpiredError") {

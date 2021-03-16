@@ -1,6 +1,7 @@
-[2021-03-15T17:40:00.425] [INFO] production - GET /api/articles RESPONSE: 200
-[2021-03-15T17:40:00.465] [INFO] production - GET /api/article/tags RESPONSE: 200
-[2021-03-15T17:40:00.510] [INFO] production - GET /api/articles RESPONSE: 200
-[2021-03-15T17:40:00.918] [INFO] production - GET /api/photos RESPONSE: 200
-[2021-03-15T17:40:01.511] [INFO] production - GET /api/scripts RESPONSE: 200
-[2021-03-15T17:40:02.005] [INFO] production - GET /api/audios RESPONSE: 200
+[2021-03-16T20:27:07.381] [INFO] production - GET /api/verifyLogin RESPONSE: 200
+[2021-03-16T20:27:14.262] [INFO] production - GET /api/login?user=admin&password=admin RESPONSE: 202
+[2021-03-16T20:27:14.402] [INFO] production - GET /api/verifyLogin RESPONSE: 200
+[2021-03-16T20:27:14.485] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-16T20:27:18.470] [INFO] production - GET /api/verifyLogin RESPONSE: 200
+[2021-03-16T20:27:18.624] [INFO] production - GET /api/user RESPONSE: 201
+[2021-03-16T20:39:01.877] [INFO] production - PUT /api/user RESPONSE: 201

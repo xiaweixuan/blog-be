@@ -3,26 +3,28 @@ const { createToken } = require('../util/token')
 class LoginController {
 
   async signIn(ctx) {
-    const request = ctx.request.body;
-
-    if (!request.username || !request.password) {
-      ctx.throw(404, { success: false, errorMessage: "INVALID_DATA" });
+    const { user, password } = ctx.query;
+    if (user !== process.env.ADMIN_USER || password !== process.env.ADMIN_PASSWORD) {
+      ctx.status = 401;
+      ctx.body = {
+        data: { message: "密码或用户名错误" },
+      };
+      return;
     }
-
-    if (request.username !== process.env.ADMIN_USER || request.password !== process.env.ADMIN_PASSWORD) {
-      ctx.throw(401, { success: false, errorMessage: "USER_INFORMATION_ERROR" });
-    }
-
-    let token = createToken({ username: request.username })
+    const token = createToken({ username: process.env.ADMIN_USER })
     ctx.set('X-Jwt-Token', token);
+    ctx.status = 202;
     ctx.body = {
-      success: true,
-      data: {},
+      data: { success: 1, message: "登录成功", version: process.env.IMAGE_TAG },
     };
-
   }
 
-
+  async verifyLogin(ctx) {
+    ctx.status = 200;
+    ctx.body = {
+      data: { success: 1, message: "身份通过" },
+    };
+  }
 
   async forgot(ctx) {
   }
