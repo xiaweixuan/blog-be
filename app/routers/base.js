@@ -14,6 +14,7 @@ router.get(`${baseUrl}`, (ctx) => {
   // ctx.status = 200;
 })
 router.get(`/theme`, (ctx) => {
+  console.log(111)
   const theme = ctx.request.query.theme;
   console.log(theme)
   ctx.cookies.set('theme', theme);
@@ -21,6 +22,12 @@ router.get(`/theme`, (ctx) => {
   ctx.redirect('../../index.html');
   ctx.body = {
     data: { message: "Hi there.", version: process.env.IMAGE_TAG },
+  };
+});
+router.get(`${baseUrl}/themelist`, (ctx) => {
+  ctx.status = 202;
+  ctx.body = {
+    data: { data: [{id: 1, name: 'default'}, {id: 2, name: 'black'}] },
   };
 });
 router.get(`${baseUrl}/2`, (ctx) => {
