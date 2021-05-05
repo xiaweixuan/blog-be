@@ -1,7 +1,166 @@
-[2021-03-16T20:27:07.381] [INFO] production - GET /api/verifyLogin RESPONSE: 200
-[2021-03-16T20:27:14.262] [INFO] production - GET /api/login?user=admin&password=admin RESPONSE: 202
-[2021-03-16T20:27:14.402] [INFO] production - GET /api/verifyLogin RESPONSE: 200
-[2021-03-16T20:27:14.485] [INFO] production - GET /api/user RESPONSE: 201
-[2021-03-16T20:27:18.470] [INFO] production - GET /api/verifyLogin RESPONSE: 200
-[2021-03-16T20:27:18.624] [INFO] production - GET /api/user RESPONSE: 201
-[2021-03-16T20:39:01.877] [INFO] production - PUT /api/user RESPONSE: 201
+[2021-05-04T17:23:47.346] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:23:47.819] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:23:47.819] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:25:09.959] [INFO] production - GET /theme RESPONSE: 301
+[2021-05-04T17:25:12.740] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:25:12.741] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:25:25.625] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:25:25.626] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:25:26.370] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:25:26.371] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:25:26.539] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:25:26.540] [INFO] production - GET /api/v1/1?theme=black RESPONSE: 404
+[2021-05-04T17:26:16.912] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T17:26:18.489] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T17:43:23.319] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T17:43:23.320] [INFO] production - GET /favicon.ico RESPONSE: 404
+[2021-05-04T17:43:36.537] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T17:43:39.032] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T17:43:41.532] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T17:43:44.226] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T17:43:47.017] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T17:43:50.390] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T17:47:52.959] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T17:47:55.453] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T17:55:44.407] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:58:36.791] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:58:38.814] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:59:03.980] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:59:06.171] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:59:28.452] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T17:59:54.773] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:01:27.424] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:01:59.323] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:02:07.013] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:02:07.597] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:40:28.339] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:40:29.852] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:40:30.360] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:40:32.747] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:40:42.832] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:40:43.304] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:40:49.279] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:40:51.224] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:40:51.647] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:40:54.200] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:40:55.655] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:40:56.033] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:43:06.476] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:43:06.487] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:43:07.616] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:43:09.608] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:43:18.633] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:43:20.733] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:43:21.274] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:44:39.838] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:44:42.319] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:44:44.687] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:44:45.050] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:44:46.321] [INFO] production - GET /theme?theme=black RESPONSE: 301
+[2021-05-04T18:44:47.504] [INFO] production - GET /theme?theme=default RESPONSE: 301
+[2021-05-04T18:44:47.868] [INFO] production - GET /api/articles?theme=black RESPONSE: 200
+[2021-05-04T18:55:18.763] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T18:55:18.765] [INFO] production - GET /index1.html RESPONSE: 404
+[2021-05-04T18:55:26.827] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T18:55:26.827] [INFO] production - GET /index2.html RESPONSE: 404
+[2021-05-04T18:55:32.550] [INFO] production - {
+  message: 'Not Found',
+  name: 'NotFoundError',
+  stack: 'NotFoundError: Not Found\n' +
+    '    at Object.throw (/Users/bytedance/project/blog-be/node_modules/koa/lib/context.js:97:11)\n' +
+    '    at /Users/bytedance/project/blog-be/node_modules/koa-json-error/lib/middleware.js:52:58\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async /Users/bytedance/project/blog-be/app/app.js:27:5\n' +
+    '    at async serve (/Users/bytedance/project/blog-be/node_modules/koa-static/index.js:53:9)\n' +
+    '    at async statics (/Users/bytedance/project/blog-be/app/middleware/statics.js:26:9)',
+  status: 404
+}
+[2021-05-04T18:55:32.551] [INFO] production - GET /index2.html RESPONSE: 404
